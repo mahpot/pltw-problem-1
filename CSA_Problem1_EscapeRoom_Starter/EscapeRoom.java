@@ -1,4 +1,4 @@
-d
+
 /*
 * Problem 1: Escape Room
 * 
@@ -67,14 +67,17 @@ public class EscapeRoom {
       /* Your code here */
       Scanner pressed = new Scanner(System.in);
       String pressedString = pressed.nextLine().toLowerCase();
-      if (pressedString.equals("a")) {
+      if (pressedString.equals("l")) {
         System.out.println("Going left.");
-      } else if (pressedString.equals("s")) {
-        System.out.println("Going down.");
+        //player.setlocation(r.getX()-1,getY()-1);
       } else if (pressedString.equals("d")) {
+        System.out.println("Going down.");
+      } else if (pressedString.equals("r")) {
         System.out.println("Going right.");
-      } else if (pressedString.equals("w")) {
+      } else if (pressedString.equals("u")) {
         System.out.println("Going up.");
+      } else if (pressedString.equals("h")) {
+        System.out.println("right, left, up, down, r for right, l for left, u for up, d for down, jump, jr, jumpleft, jl,jumpup, ju, jumpdown, jd, pickup, p, quit, q, replay, h for help, ?");
       }
 
     }
