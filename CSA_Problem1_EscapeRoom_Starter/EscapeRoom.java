@@ -59,26 +59,12 @@ public class EscapeRoom {
     Scanner in = new Scanner(System.in);
     String[] validCommands = { "right", "left", "up", "down", "r", "l", "u", "d", "jump", "jr", "jumpleft", "jl",
         "jumpup", "ju", "jumpdown", "jd", "pickup", "p", "quit", "q", "replay", "help", "?" };
-
     // set up game
     boolean play = true;
     while (play) {
       /* TODO: get all the commands working */
       /* Your code here */
-      Scanner pressed = new Scanner(System.in);
-      String pressedString = pressed.nextLine().toLowerCase();
-      if (pressedString.equals("l")) {
-        System.out.println("Going left.");
-  //player.setlocation(playerLoc.getX()-1,playerLoc.getY()-1);
-      } else if (pressedString.equals("d")) {
-        System.out.println("Going down.");
-      } else if (pressedString.equals("r")) {
-        System.out.println("Going right.");
-      } else if (pressedString.equals("u")) {
-        System.out.println("Going up.");
-      } else if (pressedString.equals("h")) {
-        System.out.println("right, left, up, down, r for right, l for left, u for up, d for down, jump, jr, jumpleft, jl,jumpup, ju, jumpdown, jd, pickup, p, quit, q, replay, h for help, ?");
-      }
+      
 
     }
 
@@ -88,3 +74,4 @@ public class EscapeRoom {
     System.out.println("steps=" + game.getSteps());
   }
 }
+
