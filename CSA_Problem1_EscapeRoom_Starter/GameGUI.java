@@ -4,7 +4,6 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.Image;
 import java.awt.Point;
-import java.awt.Event.*; 
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
@@ -156,6 +155,7 @@ public class GameGUI extends JComponent
         int endX  =  (int)r.getX() + (int)r.getWidth();
         int startY =  (int)r.getY();
         int endY = (int) r.getY() + (int)r.getHeight();
+
         // (Note: the following if statements could be written as huge conditional but who wants to look at that!?)
         // moving RIGHT, check to the right
         if ((incrx > 0) && (x <= startX) && (startX <= newX) && (y >= startY) && (y <= endY))
@@ -271,7 +271,7 @@ public class GameGUI extends JComponent
 
     for (Rectangle p: prizes)
     {
-     //DEBUG: System.out.println("prizex:" + ppx + " prizey:" + p.getY() + "\npx: " + px + " py:" + py);
+      // DEBUG: System.out.println("prizex:" + p.getX() + " prizey:" + p.getY() + "\npx: " + px + " py:" + py);
       // if location has a prize, pick it up
       if (p.getWidth() > 0 && p.contains(px, py))
       {
@@ -503,7 +503,4 @@ public class GameGUI extends JComponent
     return score;
   
   }
-  
-
-  
 }
