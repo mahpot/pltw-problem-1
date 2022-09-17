@@ -72,18 +72,34 @@ public class EscapeRoom
       String pressedString = pressed.nextLine().toLowerCase();
       if (pressedString.equals("l")) {
         System.out.println("Going left.");
-        game.movePlayer(px-47,0);
+        game.movePlayer(px-15,0);
       } else if (pressedString.equals("d")) {
         System.out.println("Going down.");
-        game.movePlayer(0,py+47);
+        game.movePlayer(0,py+15);
       } else if (pressedString.equals("r")) {
         System.out.println("Going right.");
-        game.movePlayer(px+47,0);
+        game.movePlayer(px+15,0);
       } else if (pressedString.equals("u")) {
         System.out.println("Going up.");
-        game.movePlayer(0,py-47);
-      } else if (pressedString.equals("h")) {
-        System.out.println("right, left, up, down, r for right, l for left, u for up, d for down, jump, jr, jumpleft, jl,jumpup, ju, jumpdown, jd, pickup, p, quit, q, replay, h for help, ?");
+        game.movePlayer(0,py-15);
+      } else if (pressedString.equals("jr")) {
+        System.out.println("Jumping right.");
+        game.movePlayer(m,0);
+      } 
+      else if (pressedString.equals("jl")) {
+        System.out.println("Jumping left.");
+        game.movePlayer(m * -1,0);
+      } else if (pressedString.equals("ju")) {
+        System.out.println("Jumping up.");
+        game.movePlayer(0,m*-1);
+      }else if (pressedString.equals("jd")) {
+        System.out.println("Jumping down.");
+        game.movePlayer(0,m);
+      }else if (pressedString.equals("q")) {
+        System.out.println("Quitting game.");
+        game.endGame();
+      }else if (pressedString.equals("h")) {
+        System.out.println("right, left, up, down, r for right, l for left, u for up, d for down,jr for jumping right, jr for jumping right, jl for jumping left,jd for jump down, ju for jump up, h for help, q for quit");
       }
       
     }
