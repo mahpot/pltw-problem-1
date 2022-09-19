@@ -58,7 +58,7 @@ public class EscapeRoom
     int score = 0;
 
     Scanner in = new Scanner(System.in);
-    String[] validCommands = { "right", "left", "up", "down", "r", "l", "u", "d","jumpright", "jr", "jumpleft", "jl", "jumpup", "ju", "jumpdown", "jd","pickup", "p", "quit", "q", "replay", "help", "?"};
+    String[] validCommands = { "right", "left", "up", "down", "r", "l", "u", "d","jumpright", "jr", "jumpleft", "jl", "jumpup", "ju", "jumpdown", "jd","pickup", "p", "quit", "q", "replay", "help"};
   
     // set up game
     boolean play = true;
@@ -101,8 +101,11 @@ public class EscapeRoom
         System.out.println("Replaying");
         game.replay();
         System.out.println(score);
+      }else if (pressedString.equals("pickup")||pressedString.equals("p")) {
+        score = score + game.pickupPrize();
+        System.out.println(score);
       }else if (pressedString.equals("h")||pressedString.equals("help")) {
-        System.out.println("r or right for right, l or left for left, u or up for up, d or down for down,jr or jumpright for jumping right, jl or jumpleft for jumping left,jd or jumpdownfor jump down, ju or jumpup for jump up, h or help for help, q or quit for quit, and replay to replay the game");
+        System.out.println("r or right for right, l or left for left, u or up for up, d or down for down,jr or jumpright for jumping right, jl or jumpleft for jumping left,jd or jumpdownfor jump down, ju or jumpup for jump up, h or help for help, q or quit for quit, replay to replay the game, p or pickup to pick up a prize.");
       }
       
     }
